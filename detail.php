@@ -592,6 +592,7 @@ $preference->save();
                                             data-preference-id="<?php echo $preference->id; ?>"
                                             data-button-label="Pagar la compra"
                                             data-header-color="#2D3277"
+                                            data-elements-color="#2D3277"
                                     >
                                     </script>
                                 </div>

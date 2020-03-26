@@ -9,7 +9,6 @@ $item->title = $_POST['title'];
 $item->quantity = 1;
 $item->description = "Dispositivo móvil de Tienda e-commerce";
 $item->picture_url = "https://" . $_SERVER['SERVER_NAME'] .'/'. str_replace("./","",$_POST['img']);
-echo "https://" . $_SERVER['SERVER_NAME'] . '/'. str_replace("./","",$_POST['img']);
 $item->unit_price = $_POST['price'];
 
 $preference->items = array($item);

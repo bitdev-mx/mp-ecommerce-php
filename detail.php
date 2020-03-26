@@ -580,10 +580,10 @@ $preference->save();
                                             </h3>
                                         </div>
                                         <h3>
-                                            <?php echo $_POST['price'] ?>
+                                            <?php echo "$" .$_POST['price'] ?>
                                         </h3>
                                         <h3>
-                                            <?php echo "$" . $_POST['unit'] ?>
+                                            <?php echo "Cant. " . $_POST['unit'] ?>
                                         </h3>
                                     </div>
                                     <!--<button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>-->
@@ -591,7 +591,7 @@ $preference->save();
                                             src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
                                             data-preference-id="<?php echo $preference->id; ?>"
                                             data-button-label="Pagar la compra"
-                                            data-elements-color="#2D3277"
+                                            data-header-color="#2D3277"
                                     >
                                     </script>
                                 </div>

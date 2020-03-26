@@ -556,7 +556,7 @@ $preference->save();
                                             <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="6|Powerbeats3 Wireless Earphones - Neighborhood Collection - Brick Red|MPXP2">
                                                 <div class="as-tilegallery-element as-image-selected">
                                                     <div class=""></div>
-                                                    <img src="./assets/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(<?php echo $_POST['img'] ?>) 2x);">
+                                                    <img src="<?php echo $_POST['img'] ?>" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(<?php echo $_POST['img'] ?>) 2x);">
                                                 </div>
 
                                             </div>
@@ -591,6 +591,7 @@ $preference->save();
                                             src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
                                             data-preference-id="<?php echo $preference->id; ?>"
                                             data-button-label="Pagar la compra"
+                                            data-elements-color="#2D3277"
                                     >
                                     </script>
                                 </div>

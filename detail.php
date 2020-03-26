@@ -23,21 +23,22 @@ $preference->payment_methods = array(
     ),
     "installments" => 6
 );
-$preference->payer = array(
-    "name" => "Lalo",
-    "surname" => "Landa",
-    "email" => "test_user_58295862@testuser.com",
-    "phone" => array(
-        "area_code" => "55",
-        "number" => "49737300"
-    ),
-    "address" => array(
-        "zip_code" => "03940",
-        "street_name" => "Insurgentes Sur",
-        "street_number" => 1602
-    )
+
+$payer = new MercadoPago\Payer();
+$payer->name = "Lalo";
+$payer->surname = "Landa";
+$payer->email = "test_user_58295862@testuser.com";
+$payer->phone = array(
+    "area_code" => "55",
+    "number" => "49737300"
+);
+$payer->address = array(
+    "zip_code" => "03940",
+    "street_name" => "Insurgentes Sur",
+    "street_number" => 1602
 );
 
+$preference->payer = $payer;
 echo json_encode($preference);
 
 ?>

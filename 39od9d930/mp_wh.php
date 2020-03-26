@@ -1,4 +1,5 @@
 <?php
+$json = file_get_contents('php://input');
 
-error_log("id pago: " . $_POST["id"]);
+error_log("id pago: " . $json);
 

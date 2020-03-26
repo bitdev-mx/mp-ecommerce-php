@@ -39,7 +39,8 @@ $payer->address = array(
 );
 
 $preference->payer = $payer;
-echo json_encode($preference);
+$preference->save();
+//echo json_encode($preference);
 
 ?>
 <!DOCTYPE html>
@@ -585,7 +586,13 @@ echo json_encode($preference);
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                    <!--<button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>-->
+                                    <script
+                                            src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
+                                            data-preference-id="<?php echo $preference->id; ?>"
+                                            data-button-label="Pagar la compra"
+                                    >
+                                    </script>
                                 </div>
                             </div>
                         </div>

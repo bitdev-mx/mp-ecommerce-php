@@ -16,10 +16,10 @@ $preference->external_reference = "ABCD1234";
 $preference->notification_url  = "https://" . $_SERVER['SERVER_NAME'] . "/39od9d930/mp_wh.php";
 $preference->payment_methods = array(
     "excluded_payment_types" => array(
+        array("id" => "atm"),
+    ),
+    "excluded_payment_methods" => array(
         array("id" => "amex"),
-        array("id" => "banamex"),
-        array("id" => "serfin"),
-        array("id" => "bancomer"),
     ),
     "installments" => 6
 );
